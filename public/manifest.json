@@ -1,0 +1,9 @@
+{
+  "short_name": "Crypto Trader",
+  "name": "Telegram Crypto Trading Simulator",
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#667eea",
+  "background_color": "#1e2328",
+  "orientation": "portrait"
+}
