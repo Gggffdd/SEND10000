@@ -17,8 +17,8 @@ app.get('/api/health', (req, res) => {
   res.json({ status: 'OK', timestamp: new Date().toISOString() });
 });
 
-// Главная страница
-app.get('/', (req, res) => {
+// Главная страница API
+app.get('/api', (req, res) => {
   res.json({ 
     message: 'Crypto Telegram Mini App API',
     version: '1.0.0'
