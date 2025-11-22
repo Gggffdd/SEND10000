@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 
 const Wallet = ({ user }) => {
@@ -72,4 +71,42 @@ const Wallet = ({ user }) => {
             <div key={transaction.id} className="transaction-item">
               <div>
                 <div className={`transaction-type ${transaction.type}`}>
-                  {transaction.type.charAt(0).toUpperCase() + transaction.type.slice(1
+                  {transaction.type.charAt(0).toUpperCase() + transaction.type.slice(1)}
+                </div>
+                <div style={{ fontSize: '12px', color: '#8a8f95' }}>
+                  {transaction.description || transaction.type}
+                </div>
+                <div style={{ fontSize: '12px', color: '#8a8f95' }}>
+                  {formatDate(transaction.timestamp)}
+                </div>
+              </div>
+              
+              <div style={{ textAlign: 'right' }}>
+                <div style={{ 
+                  fontWeight: '700',
+                  color: transaction.amount >= 0 ? '#00ff88' : '#ff4444'
+                }}>
+                  {transaction.amount >= 0 ? '+' : ''}{transaction.amount} {transaction.currency}
+                </div>
+                <div style={{ 
+                  fontSize: '12px', 
+                  color: transaction.status === 'completed' ? '#00ff88' : '#ffb347'
+                }}>
+                  {transaction.status}
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      )}
+
+      {activeTab === 'assets' && (
+        <div style={{ textAlign: 'center', padding: '40px', color: '#8a8f95' }}>
+          Asset distribution chart will be displayed here
+        </div>
+      )}
+    </div>
+  );
+};
+
+export default Wallet;
