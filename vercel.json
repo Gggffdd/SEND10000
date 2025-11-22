@@ -31,6 +31,8 @@
       "dest": "/index.html"
     }
   ],
+  "buildCommand": "npm run vercel-build",
+  "outputDirectory": "dist",
   "env": {
     "BOT_TOKEN": "8579547514:AAFJQR6CL_Ui2Q8-Ac0g_y4vBtwrR4tXraU"
   }
